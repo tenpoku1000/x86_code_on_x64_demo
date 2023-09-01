@@ -1,0 +1,15 @@
+
+x86.bin:     file format binary
+
+
+Disassembly of section .data:
+
+00000000 <.data>:
+   0:	55                   	push   ebp
+   1:	e8 05 00 00 00       	call   0xb
+   6:	8b 45 fc             	mov    eax,DWORD PTR [ebp-0x4]
+   9:	5d                   	pop    ebp
+   a:	c3                   	ret    
+   b:	89 e5                	mov    ebp,esp
+   d:	c7 45 fc 04 00 00 00 	mov    DWORD PTR [ebp-0x4],0x4
+  14:	c3                   	ret    
