@@ -72,7 +72,7 @@ OPTIONAL HEADER VALUES
 コマンドプロンプトで以下のコマンドを投入し、ゾーン情報を削除します。
 
 ```
-C:\>echo.>x86_code_on_x64_demo-master.zip:Zone.Identifier
+C:\>echo.>x86_code_on_x64_demo-main.zip:Zone.Identifier
 ```
 
 ## 開発環境
@@ -100,8 +100,6 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
 ## ビルド方法
 
 # x86_code_on_x64_demo.sln ファイルをダブルクリックします。
-* ゾーン情報を削除していない場合は、Visual Studio のセキュリティ警告を回避してプロジェクトを開きます。  
-![warning](images/MSVC.PNG)
 
 * F7 キーを押下します。
 
