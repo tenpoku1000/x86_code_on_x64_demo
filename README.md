@@ -99,7 +99,7 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
 
 ## ビルド方法
 
-# x86_code_on_x64_demo.sln ファイルをダブルクリックします。
+* x86_code_on_x64_demo.sln ファイルをダブルクリックします。
 
 * F7 キーを押下します。
 
