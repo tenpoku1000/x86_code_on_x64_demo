@@ -121,8 +121,11 @@ https://learn.microsoft.com/en-us/cpp/build/reference/largeaddressaware-handle-l
 PE Format - Win32 apps | Microsoft Learn  
 https://learn.microsoft.com/en-us/windows/win32/debug/pe-format
 
-IsWow64Process function (wow64apiset.h) - Win32 apps | Microsoft Learn  
-https://learn.microsoft.com/en-us/windows/win32/api/wow64apiset/nf-wow64apiset-iswow64process
+IsWow64Process2 function (wow64apiset.h) - Win32 apps | Microsoft Learn  
+https://learn.microsoft.com/en-us/windows/win32/api/wow64apiset/nf-wow64apiset-iswow64process2
+
+Image File Machine Constants (Winnt.h) - Win32 apps | Microsoft Learn  
+https://learn.microsoft.com/en-us/windows/win32/sysinfo/image-file-machine-constants
 
 _alloca | Microsoft Learn  
 https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/alloca?view=msvc-170

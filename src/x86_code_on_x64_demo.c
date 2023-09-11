@@ -43,18 +43,26 @@ int main(void)
     errno_t err = _set_errno(0);
     SetLastError(NO_ERROR);
 
-    BOOL Wow64Process = FALSE;
+    // IMAGE_FILE_MACHINE_UNKNOWN : 0x0
+    // IMAGE_FILE_MACHINE_I386    : 0x014c : Intel 386
+    // IMAGE_FILE_MACHINE_AMD64   : 0x8664 : AMD64 (K8)
+    // IMAGE_FILE_MACHINE_ARM64   : 0xAA64 : ARM64 Little-Endian
+    USHORT ProcessMachine = IMAGE_FILE_MACHINE_UNKNOWN;
+    USHORT NativeMachine = IMAGE_FILE_MACHINE_UNKNOWN;
 
-    if ( ! IsWow64Process(GetCurrentProcess(), &Wow64Process)){
+    if ( ! IsWow64Process2(GetCurrentProcess(), &ProcessMachine, &NativeMachine)){
 
         get_last_error(__func__, __LINE__);
 
         return EXIT_FAILURE;
     }
 
-    if (Wow64Process){
+    if (ProcessMachine){
 
-        fprintf(stderr, "ERROR: Running in 32-bit mode.\n");
+        fprintf(
+            stderr, "ERROR: Running in 32-bit mode(0x%x on 0x%x).\n",
+            ProcessMachine, NativeMachine
+        );
 
         return EXIT_FAILURE;
     }
